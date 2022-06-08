@@ -1,0 +1,66 @@
+<template>
+  
+	<div class=" hidden sm:inline container mx-auto h-32 font-sans antialiased ">
+  <nav class="   border-b border-slate-900/10 backdrop-blur-sm bg-white/30 h-16  rounded-sm">
+  
+  <ul class="inline-block">
+
+      <router-link to="/AndroidNewsPosts"><li class="inline-block m-4">Android最新資訊</li></router-link>
+      <router-link to="/AndroidPhonePosts"><li class="inline-block m-4">Android手機</li></router-link>
+    <router-link to="/AndroidFlashPosts"><li class="inline-block m-4">Android刷機</li></router-link>
+       <router-link to="/other"> <li class="inline-block m-4">其他</li></router-link>
+            <router-link to="/aboutUs"><li class="inline-block m-4">關於我們</li></router-link>
+             <router-link to="/game"><li class="inline-block m-4">電玩專區</li></router-link>
+  </ul>
+  
+  
+  
+  </nav>
+</div>
+
+	<div class="  block sm:hidden container mx-auto h-32 font-sans antialiased ">
+  <nav class="   border-b border-slate-900/10 backdrop-blur-sm bg-white/30 h-16  rounded-sm" :class="navShows">
+  <div @click="shows='block'; navShows='hidden'">
+
+
+  <span class="material-symbols-outlined inset-y-4 left-4 absolute" >
+menu
+</span>
+  </div>
+
+  
+  
+  </nav>
+  <div :class="shows">
+  <div class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80  h-screen" ></div>
+<div class="relative bg-white h-screen w-80 max-w-[calc(100%-3rem)] p-6 dark:bg-slate-800">
+  <span class="material-symbols-outlined" @click="shows='hidden'; navShows='block' ">
+menu_open
+</span>
+</div>
+</div>
+  
+</div>
+
+</template>
+
+<script>
+
+export default {
+    name:'Navigator',
+    data(){
+      return{
+shows:"hidden",
+navShows:'block'
+      }
+    },methods:{
+    
+    }
+}
+
+</script>
+
+<style scoped>
+
+
+</style>
