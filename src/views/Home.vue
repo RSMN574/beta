@@ -1,7 +1,7 @@
 <template>
 
 <div class="bg-[#f9f6fd] h-full"><Navigator class="fixed"></Navigator>	<div class="container mx-auto p-4">
-			<h1 class="text-2xl mb-8">Latest posts</h1>
+			<h1 class="text-2xl mb-8 mt-12">Latest posts</h1>
 
 			<div class="grid gap-4">
 				<postCard v-for="(post, i) in post" :key="i" :post="post" />

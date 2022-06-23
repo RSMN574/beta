@@ -4,7 +4,7 @@ import sanity from '../client'
 export default createStore({
   state: {
    post: {
-     home:{},
+     home:[],
     AndroidNewsPosts:[],
     AndroidPhonePosts:[], 
     AndroidFlashPosts:[], 
@@ -26,7 +26,7 @@ export default createStore({
           case "AndroidPhonePosts":
             state.post.AndroidPhonePosts.push(posts)
             break;
-            case " AndroidFlashPosts":
+            case "AndroidFlashPosts":
               state.post.AndroidFlashPosts.push(posts)
               break;
               case "aboutUs":
@@ -56,12 +56,12 @@ state.cache=n
 
 		 sanity.fetch(query).then(	async posts => {
         for(let i in posts){
-      
+          console.log(posts)
        posts[i].target=posts[i].category_pro
    
        posts[i].author.full_name=  await dispatch('FetchAuthor' ,posts[i].author._ref)
        posts[i].author.imageUrl=await dispatch('fetchAuthorImg' ,posts[i].author.full_name)
-      console.log(state.cache)
+      
        commit('SET_POSTS', posts[i])
         }
 		

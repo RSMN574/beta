@@ -4,6 +4,7 @@ import AndroidNewsPosts from '../views/AndroidNewsPosts.vue'
 import AndroidFlashPosts from '../views/AndroidFlashPosts.vue'
 import AndroidPhonePosts from '../views/AndroidPhonePosts.vue'
 import aboutUs from '../views/aboutUs.vue'
+import game from '../views/game.vue'
 
 
 const routes = [
@@ -45,6 +46,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: aboutUs
+  },
+  {
+    path: '/game',
+    name: 'game',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: game
   },
 ]
 

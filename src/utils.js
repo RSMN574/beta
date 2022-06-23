@@ -1,5 +1,8 @@
 import sanity from './client'
 import imageUrlBuilder from '@sanity/image-url'
+import { SanityBlocks } from 'sanity-blocks-vue-component';
+
+
 const builder = imageUrlBuilder(sanity)
 
 export const CreateURL = (source, width = 100, height = 100) => {
@@ -13,5 +16,5 @@ export const TextToHTML = (text) => {
 export const FormatDate = (date) => {
 	return new Date(date).toLocaleDateString()
 } 
-
+export {SanityBlocks}
 

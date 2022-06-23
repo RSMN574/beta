@@ -1,7 +1,7 @@
 <template>
-  <div class="hidden sm:inline container mx-auto h-32 font-sans antialiased">
+  <div class="hidden sm:inline  h-32 font-sans antialiased  fixed  left-0 w-screen ">
     <nav
-      class="border-b border-slate-900/10 backdrop-blur-sm bg-white/30 h-16 rounded-sm"
+      class="border-b border-slate-900/10 backdrop-blur-lg bg-white/30 h-16 rounded-sm "
     >
       <ul class="inline-block">
         <router-link to="/AndroidNewsPosts?reload">
@@ -61,22 +61,22 @@
           menu_open
         </span>
         <router-link to="/AndroidNewsPosts?reload">
-          <li class="inline-block m-4">Android最新資訊</li>
+          <li class=" m-4">Android最新資訊</li>
         </router-link>
         <router-link to="/AndroidPhonePosts?reload">
-          <li class="inline-block m-4">Android手機</li>
+          <li class=" m-4">Android手機</li>
         </router-link>
         <router-link to="/AndroidFlashPosts?reload">
-          <li class="inline-block m-4">Android刷機</li>
+          <li class=" m-4">Android刷機</li>
         </router-link>
         <router-link to="/other?reload">
-          <li class="inline-block m-4">其他</li>
+          <li class=" m-4">其他</li>
         </router-link>
         <router-link to="/aboutUs?reload">
-          <li class="inline-block m-4">關於我們</li>
+          <li class=" m-4">關於我們</li>
         </router-link>
         <router-link to="/game?reload">
-          <li class="inline-block m-4">電玩專區</li>
+          <li class=" m-4">電玩專區</li>
         </router-link>
       </div>
     </div>

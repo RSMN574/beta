@@ -42,6 +42,7 @@
 </template>
 
 <script>
+
 import sanity from '../client'
 import { CreateURL, TextToHTML } from '../utils'
 export default {
@@ -64,3 +65,6 @@ CreateURL, TextToHTML,
 	}
 
 </script>
+<style scoped>
+
+</style>

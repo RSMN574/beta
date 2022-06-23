@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "android-king"
+    "name": "androidking"
   },
   "api": {
-    "projectId": "e3z03jbn",
+    "projectId": "42dlbyyj",
     "dataset": "production"
   },
   "plugins": [
