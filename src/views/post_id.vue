@@ -7,8 +7,8 @@
 	</div>
 
 	<br>
-	<div>
-  <SanityBlocks :blocks="blocks"/>
+	<div class="overflow-x-clip text-left p-8" id="block">
+  <SanityBlocks :blocks="blocks"  :serializers="serializers"/>
 	</div>
 	
 	</div>
@@ -31,7 +31,16 @@ components:{
 		id:this.$route.params.id,
 		post:{ },
 		 blocks : [ ],
-		  blocksH:null,
+	serializers:{
+		types: {
+   image: (value)=> <img src={"https://cdn.sanity.io/images/42dlbyyj/production/"+value.asset._ref.substring(6,value.asset._ref.length-4)+".png"} />
+	
+
+   
+  
+   
+  },
+	}
 		
  
   
@@ -44,6 +53,7 @@ mounted(){
 			sanity.fetch(query, params).then(data => {
 			this.post= data
 			this.blocks= data.body
+			console.log(	this.blocks)
 			})
 		
 

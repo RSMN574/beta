@@ -2,11 +2,11 @@
 <div id="fullpage">
 	<div class="section"><div class="background--custom">
       <canvas id="canvas" />
-      <div><h1>電玩專區</h1></div>
+      <div class="mx-auto my-auto mt-40 backdrop-blur-2xl bg-white/30 h-52 w-6/12"><h1>電玩專區</h1></div>
     </div></div>
-	<div class="section"><img src="https://book.vue.tw/assets/img/1-7-lifecycle-1.3fc0cf06.png"></div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
+	<div class="section">開發中</div>
+	<div class="section">開發中</div>
+	<div class="section">開發中</div>
 </div>
      
  

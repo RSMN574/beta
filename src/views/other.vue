@@ -1,8 +1,10 @@
 <template>
     <div class="bg-[#f9f6fd] h-full "><Navigator ></Navigator>	<div class="container mx-auto p-4 ">
-			<h1 class="text-2xl mb-8 mt-12">介紹</h1>
-開發中
-			
+			<h1 class="text-2xl mb-8 mt-12">Android最新資訊</h1>
+
+			<div class="grid justify-items-stretch ">
+				<postCard v-for="(post, i) in post" :key="i" :post="post" class="justify-self-center " />
+			</div>
 
 			
 		</div></div>
@@ -18,12 +20,12 @@
 
 <script>
 
-
+import postCard from '@/components/postCard.vue'
 import Navigator from '@/components/nav.vue'
 export default {
     name:'other',
     components:{
-       Navigator
+        postCard,Navigator
     },data(){
         return{
 post:{},
@@ -38,7 +40,6 @@ post:{},
 
 		}
 window.addEventListener('load',()=>{
-    this.$store.dispatch("fetchAuthorPost")
 	this.post=this.$store.state.post.other
 		console.log(this.post)
 		})

@@ -14,6 +14,7 @@ export default createStore({
      
    },
    cache:null,
+   author:[]
  
   },
   mutations: {
@@ -47,7 +48,10 @@ export default createStore({
 			
 		},SET_CACHE(state,n){
 state.cache=n
-    }, 
+    }, SET_AUTHOR(state,author){
+      state.author.push(author)
+      console.log(state.author)
+    }
 
   },
   actions: {
@@ -70,7 +74,7 @@ state.cache=n
 			})
 
 			}, 
- async FetchAuthor({context,},id){
+ async FetchAuthor({context,},id){        
        var re=""
    let author_id=id
  	 await sanity.fetch( `*[ _type=="author" && _id=="${author_id}"]`).then(author => {
@@ -94,6 +98,13 @@ state.cache=n
       
               })
          return re
+            }, async fetchAuthorPost({commit}){
+              const query = `*[ _type=="author" ]| order(_updatedAt) `
+
+              sanity.fetch(query).then(	async author => {
+                commit("SET_AUTHOR",author)
+                 })
+                
             }
 	
   },

@@ -4,23 +4,27 @@
       class="border-b border-slate-900/10 backdrop-blur-lg bg-white/30 h-16 rounded-sm "
     >
       <ul class="inline-block">
+         <router-link to="/?reload">
+          <li class="inline-block m-4">  <img class="w-8 " src="../assets/a-k-o-f.svg"></li>
+        </router-link>
+      
         <router-link to="/AndroidNewsPosts?reload">
-          <li class="inline-block m-4">Android最新資訊</li>
+          <li class="inline-block m-4 align-top">Android最新資訊</li>
         </router-link>
         <router-link to="/AndroidPhonePosts?reload">
-          <li class="inline-block m-4">Android手機</li>
+          <li class="inline-block m-4 align-top">Android手機</li>
         </router-link>
         <router-link to="/AndroidFlashPosts?reload">
-          <li class="inline-block m-4">Android刷機</li>
+          <li class="inline-block m-4 align-top">Android刷機</li>
         </router-link>
         <router-link to="/other?reload">
-          <li class="inline-block m-4">其他</li>
+          <li class="inline-block m-4 align-top">其他</li>
         </router-link>
         <router-link to="/aboutUs?reload">
-          <li class="inline-block m-4">關於我們</li>
+          <li class="inline-block m-4 align-top">關於我們</li>
         </router-link>
         <router-link to="/game?reload">
-          <li class="inline-block m-4">電玩專區</li>
+          <li class="inline-block m-4 align-top">電玩專區</li>
         </router-link>
       </ul>
     </nav>
@@ -60,6 +64,9 @@
         >
           menu_open
         </span>
+            <router-link to="/?reload">
+          <li class=" m-4">首頁</li>
+        </router-link>
         <router-link to="/AndroidNewsPosts?reload">
           <li class=" m-4">Android最新資訊</li>
         </router-link>
