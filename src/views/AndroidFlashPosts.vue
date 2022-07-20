@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#f9f6fd] h-full "><Navigator ></Navigator>	<div class="container mx-auto p-4 ">
+    <div class="bg-[#f9f6fd] h-screen overflow-y-scroll"><Navigator ></Navigator>	<div class="container mx-auto p-4 ">
 			<h1 class="text-2xl mb-8 mt-12">Android最新資訊</h1>
 
 			<div class="grid justify-items-stretch ">

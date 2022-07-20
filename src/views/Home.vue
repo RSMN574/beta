@@ -1,15 +1,13 @@
 <template>
-
-<div class="bg-[#f9f6fd] h-full"><Navigator class="fixed"></Navigator>	<div class="container mx-auto p-4">
-			<h1 class="text-2xl mb-8 mt-12">Latest posts</h1>
-			<div v-if="homeP">
-
+<div class="bg-[#f9f6fd] h-screen overflow-y-scroll"><Navigator class="fixed"></Navigator>	<div class="container mx-auto p-4">
+		
 			
-<homePost v-for="(homeP, i) in home" :key="i" :homeP="home" ></homePost>
-</div>
-			<div class="grid gap-4">
-				<postCard v-for="(post, i) in post" :key="i" :post="post" />
-			</div>
+
+		<div class="mt-24 grid  auto-rows-auto lg:grid-cols-3 sm:grid-cols-1 sm:w-full mx-auto md:grid-cols-2">
+<homePost v-for="(post, i) in home" :key="i" :post="post" ></homePost>
+
+</div >	
+		
 
 			
 		</div></div>
@@ -51,7 +49,8 @@ window.addEventListener('load',()=>{
 		
 			
 			sanity.fetch(query).then(async data => {
-	
+	         this.home=data
+			
 
 		
 		

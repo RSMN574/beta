@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden sm:inline  h-32 font-sans antialiased  fixed  left-0 w-screen ">
+  <div class=" sm:hidden inline  h-32 font-sans antialiased  fixed  left-0 w-screen ">
     <nav
       class="border-b border-slate-900/10 backdrop-blur-lg bg-white/30 h-16 rounded-sm "
     >
@@ -30,7 +30,7 @@
     </nav>
   </div>
 
-  <div class="block sm:hidden container mx-auto h-32 font-sans antialiased">
+  <div class=" sm:block hidden container mx-auto  font-sans antialiased">
     <nav
       class="border-b border-slate-900/10 backdrop-blur-sm bg-white/30 h-16 rounded-sm"
       :class="navShows"
@@ -100,6 +100,13 @@ export default {
     };
   },
   methods: {},
+  mounted(){
+    var ua = navigator.userAgent;
+    var android = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1; // android
+    if(android==true){
+
+}
+  }
 };
 </script>
 

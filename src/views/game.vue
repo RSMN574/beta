@@ -1,39 +1,33 @@
 <template>
-<div id="fullpage">
-	<div class="section"><div class="background--custom">
-      <canvas id="canvas" />
-      <div class="mx-auto my-auto mt-40 backdrop-blur-2xl bg-white/30 h-52 w-6/12"><h1>電玩專區</h1></div>
-    </div></div>
-	<div class="section">開發中</div>
-	<div class="section">開發中</div>
-	<div class="section">開發中</div>
-</div>
+<nav class=""> <ul class="inline-block">
+      
+      
+        <a href="#aov">
+          <li class="inline-block m-4 align-top">傳說對決</li>
+        </a>
+        <a href="#極速領域">
+          <li class="inline-block m-4 align-top">極速領域</li>
+        </a>
+        <a href="#pubg">
+          <li class="inline-block m-4 align-top">PUBG</li>
+        </a>
+        <a href="#other">
+          <li class="inline-block m-4 align-top">其他</li>
+        </a>
+       
+      </ul>
+    </nav>
+	<div class="section bg-no-repeat bg-cover aspect-video bg-scroll"  style="   background-image:url('https://raw.githubusercontent.com/RSMN574/profile/c25dbff8baeb5b348bae600cfc43022bb0e42aa9/RS%20GAMIMG.png')">
+ 
+
+  
+    </div>
+	  
      
  
 </template>
  <style scoped>
-      .background--custom {
-        background-color: #FFFFFF;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        overflow: hidden;
-        z-index: -2;
-        top: 0;
-        left: 0;
-      }
-      canvas#canvas {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 60%;
-        transform: rotate(20deg) scale(2) translateY(0%);
-        --gradient-color-1: #ef008f; 
-        --gradient-color-2: #6ec3f4; 
-        --gradient-color-3: #7038ff;  
-        --gradient-color-4: #ffba27;
-        --gradient-speed: 0.000006;
-      }
+     
     </style>
     
     <script>
@@ -42,7 +36,7 @@
     name:'game',
     data(){
 return{
-   gradient:null
+ 
 }
     },
 mounted(){
@@ -52,13 +46,8 @@ mounted(){
 
 		}
     else{
-      this.gradient = new Gradient();
-      this.gradient.initGradient("#canvas");
-      new fullpage('#fullpage', {
-	//options here
-	autoScrolling:true,
-	scrollHorizontally: true
-});
+     
+    
     }
     }
     }

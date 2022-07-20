@@ -5,16 +5,26 @@
 </template>
 <script>
 export default {
+  data(){
+    return{
+show:"block"
+    }
+  },
   mounted(){
     this.$store.dispatch('FetchPosts')
+
+  },beforeCreate(){
 
   }
 }
 
 </script>
 <style>
+
+
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: misans,Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

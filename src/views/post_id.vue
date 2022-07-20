@@ -1,5 +1,5 @@
 <template>
-<div class="bg-[#f9f6fd] h-full  overflow-y-scroll" ><Navigator class=""></Navigator>
+<div class="bg-[#f9f6fd] h-screen  overflow-y-scroll" ><Navigator class=""></Navigator>
 
 	<div class="my-12 text-center w-full mt-20 bg-[#f5f8fc]  self-center  mx-auto shadow-lg border border-slate-300  rounded-xl sm:w-3/5">
 	<div class="  mx-auto ">
@@ -47,7 +47,7 @@ components:{
 	}
 },
 mounted(){
-	const query = '*[_type == "post" && _id == $id][0] { ..., author-> }'
+	const query = '*[_type == "post" || _type == "home" && _id == $id][0] { ..., author-> }'
 			const params = { id: this.id }
 			
 			sanity.fetch(query, params).then(data => {

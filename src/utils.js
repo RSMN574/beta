@@ -5,7 +5,7 @@ import { SanityBlocks } from 'sanity-blocks-vue-component';
 
 const builder = imageUrlBuilder(sanity)
 
-export const CreateURL = (source, width = 100, height = 100) => {
+export const CreateURL = (source, width = 1920, height = 1080) => {
 	return builder.image(source).width(width).height(height).url()
 }
 
