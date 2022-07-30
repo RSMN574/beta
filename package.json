@@ -8,13 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@nhost/vue": "^0.4.0",
     "@sanity/block-content-to-html": "^2.0.0",
     "@sanity/client": "^3.3.2",
     "@sanity/image-url": "^1.0.1",
     "core-js": "^3.8.3",
-    "headroom.js": "^0.12.0",
+    "element-plus": "^2.2.11",
+    "graphql": "^16.5.0",
     "image-js": "^0.34.1",
-    "jquery": "^3.6.0",
     "sanity": "^2.29.3",
     "sanity-blocks-vue-component": "^1.0.1",
     "vue": "^3.2.13",
